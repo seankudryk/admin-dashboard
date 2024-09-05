@@ -7,10 +7,11 @@
 
 main {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
 }
 
 .sidebar {
+    display: grid;
     color: white;
     background-color: rgb(24, 135, 206);
     height: 100%;
@@ -18,8 +19,23 @@ main {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    padding-left: 25px;
 } 
 
+.sidebar-logo {
+    padding-top: 15px;
+}
+
+.sidebar-list-container {
+    height: 60%;
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+}
+
+.sidebar li {
+    list-style-type: none;
+    padding: 5px;
+}
 
 .header-container {
     grid-column-start: 2;
@@ -60,7 +76,7 @@ main {
 .button-container button {
     width: 75px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 7px;
     border: none;
     background-color: rgb(24, 135, 206);
     color: white;
@@ -69,14 +85,23 @@ main {
 .body-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 2em auto;
     grid-column-start: 2;
     background: rgb(222, 229, 238);
     padding: 25px;
 }
 
+.body-container-column-header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-items: center;
+}
+
+
+
 .card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(25px, 300px));
     grid-column-start: 1;
     grid-column-end: 2;
     gap: 25px;
@@ -84,7 +109,7 @@ main {
 
 .project-card {
     width: 100%;
-    height: 80px;
+    height: 100%;
     border-left: 4px solid rgb(241, 197, 21);
 }
 
@@ -96,25 +121,33 @@ main {
     gap: 25px;
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 3;
-    padding-left: 25px;
 }
 
 .right-sidebar p {
-    font-size: 1vw;
+    font-size: clamp(15px, 1vw, 30px);
 }
 
 .card {
-    border-radius: 15px;
+    border-radius: 10px;
     background: white;
     box-shadow: 2px 2px 5px gray;
 }
 
-.body-container h2 {
-    padding-bottom: 5px;
-}
-
-.trending-user {
+.trending-user, .announcement-section {
     padding: 10px;
 }
+
+.announcements {
+    margin-bottom: 15px;
+}
+
+.announcement-section p {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.announcement-section:last-child p {
+    border-bottom: none;
+}
+
