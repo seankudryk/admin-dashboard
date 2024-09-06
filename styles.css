@@ -28,7 +28,12 @@ p {
 } 
 
 .sidebar-logo {
+    text-align: center;
     padding-top: 15px;
+}
+
+.sidebar-logo h2 {
+    font-size: 30px;
 }
 
 .sidebar-list-container {
@@ -40,7 +45,7 @@ p {
 .sidebar li {
     list-style-type: none;
     padding: 5px;
-    font-size: 20px;
+    font-size: clamp(20px, 1.2vw, 40px);
 }
 
 .list-item {
@@ -73,6 +78,7 @@ p {
 .active-user-container {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: 25%;
     padding-right: 30px;
 }
@@ -111,9 +117,9 @@ input[type="search"] {
 }
 
 .button-container button {
-    width: 75px;
-    height: 30px;
-    border-radius: 15px;
+    width: 90px;
+    height: 40px;
+    border-radius: 22px;
     border: none;
     background-color: rgb(24, 135, 206);
     color: white;
@@ -157,7 +163,12 @@ input[type="search"] {
 }
 
 .project-card h3 {
+    font-size: clamp(20px, 1.2vw, 40px);
     padding-bottom: 5px;
+}
+
+.project-card p {
+    font-size: clamp(15px, 1vw, 30px);
 }
 
 .sidebar-card {
@@ -182,18 +193,34 @@ input[type="search"] {
     box-shadow: 2px 2px 5px gray;
 }
 
+.trending {
+    border-left: 6px solid purple;
+}
+
 .trending-header {
     padding-bottom: 5px;
 }
 
 .trending-user {
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 0;
 }
+
+.trending-user:first-child {
+    padding-top: 10px;
+}
+
 
 .announcements {
     margin-bottom: 15px;
     padding: 20px;
+    border-left: 6px solid purple;
 }
+    
 
 .announcement-section p {
     border-bottom: 1px solid rgb(204, 204, 204);
@@ -203,6 +230,7 @@ input[type="search"] {
 .announcement-section h3 {
     padding-top: 10px;
     padding-bottom: 5px;
+    font-size: clamp(20px, 1.2vw, 40px);
 }
 
 .announcement-section:last-child p {
@@ -222,7 +250,6 @@ input[type="search"] {
 .sidebar-svg {
     height: 25px;
     width: 25px; 
-    color: white;
     margin-right: 20px;
 }
 
@@ -230,3 +257,25 @@ input[type="search"] {
     margin-right: 10px;
 }
 
+.notification-bell {
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+}
+
+
+.display-picture-svg {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.main-display-picture {
+    height: 120px;
+    width: 120px;
+}
+
+.trending-user-display-picture {
+    height: 60px;
+    width: 60px;
+}
