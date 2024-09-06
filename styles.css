@@ -43,6 +43,12 @@ p {
     font-size: 20px;
 }
 
+.list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .header-container {
     padding-left: 25px;
     display: flex;
@@ -54,10 +60,12 @@ p {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 .search-bar-container {
+    display: flex;
+    align-items: center;
     width: 75%;
 }
 
@@ -205,5 +213,19 @@ input[type="search"] {
     padding-top: 0;
 }
 
+.svg {
+    height: 35px;
+    width: 35px;
+}
 
+.sidebar-svg {
+    height: 25px;
+    width: 25px; 
+    color: white;
+    margin-right: 20px;
+}
+
+.search-svg {
+    margin-right: 10px;
+}
 
